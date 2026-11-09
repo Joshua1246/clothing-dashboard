@@ -1,0 +1,1010 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服飾商品資料庫查詢與管理系統</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8f9fa; margin: 0; padding: 0; }
+        header { background: #2c3e50; color: white; text-align: center; padding: 25px 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        header h1 { margin: 0; font-size: 28px; }
+        header p { margin-top: 8px; color: #bdc3c7; font-size: 14px; }
+        .container { max-width: 1280px; margin: 30px auto; padding: 0 20px; }
+        .stats-bar { display: flex; justify-content: space-around; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); margin-bottom: 30px; }
+        .stat-item { text-align: center; }
+        .stat-item h2 { margin: 0; color: #2980b9; font-size: 28px; }
+        .stat-item p { margin: 5px 0 0 0; color: #7f8c8d; font-size: 14px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 25px; }
+        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.2s, box-shadow 0.2s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+        .img-container { width: 100%; height: 260px; overflow: hidden; background: #eee; }
+        .img-container img { width: 100%; height: 100%; object-fit: cover; }
+        .card-body { padding: 15px; }
+        .badge { background: #e8f4fd; color: #2980b9; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; margin-right: 5px; }
+        .brand-badge { background: #fef9e7; color: #d35400; }
+        .card-body h3 { margin: 10px 0 5px 0; font-size: 16px; color: #2c3e50; }
+        .details { color: #95a5a6; font-size: 13px; margin: 0 0 12px 0; }
+        .price-row { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #ecf0f1; padding-top: 10px; }
+        .price { color: #e74c3c; font-size: 18px; font-weight: bold; }
+        .stock { color: #27ae60; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>👔 服飾商品資料庫檢索系統</h1>
+        <p>Clothing Database Homework 1 Dashboard (60 Products Display)</p>
+    </header>
+    <div class="container">
+        <div class="stats-bar">
+            <div class="stat-item"><h2>60</h2><p>總服飾商品數</p></div>
+            <div class="stat-item"><h2>5</h2><p>品牌分類</p></div>
+            <div class="stat-item"><h2>5</h2><p>服飾種類</p></div>
+            <div class="stat-item"><h2>25</h2><p>會員顧客</p></div>
+        </div>
+        <div class="grid">
+            
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-001.jpg" alt="純棉T恤 01款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">上衣</span>
+            <span class="badge brand-badge">Urban Leaf</span>
+            <h3>純棉T恤 01款</h3>
+            <p class="details">顏色: 白色 | 尺寸: M</p>
+            <div class="price-row">
+                <span class="price">NT$ 610</span>
+                <span class="stock">庫存: 7 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-002.jpg" alt="直筒牛仔褲 02款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">褲子</span>
+            <span class="badge brand-badge">North Thread</span>
+            <h3>直筒牛仔褲 02款</h3>
+            <p class="details">顏色: 米色 | 尺寸: L</p>
+            <div class="price-row">
+                <span class="price">NT$ 830</span>
+                <span class="stock">庫存: 14 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-003.jpg" alt="百褶裙 03款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">裙子</span>
+            <span class="badge brand-badge">Mode Studio</span>
+            <h3>百褶裙 03款</h3>
+            <p class="details">顏色: 藍色 | 尺寸: XL</p>
+            <div class="price-row">
+                <span class="price">NT$ 1,050</span>
+                <span class="stock">庫存: 21 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-004.jpg" alt="防風外套 04款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">外套</span>
+            <span class="badge brand-badge">Daily Wear</span>
+            <h3>防風外套 04款</h3>
+            <p class="details">顏色: 灰色 | 尺寸: S</p>
+            <div class="price-row">
+                <span class="price">NT$ 1,270</span>
+                <span class="stock">庫存: 28 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-005.jpg" alt="碎花洋裝 05款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">洋裝</span>
+            <span class="badge brand-badge">Peak Active</span>
+            <h3>碎花洋裝 05款</h3>
+            <p class="details">顏色: 綠色 | 尺寸: M</p>
+            <div class="price-row">
+                <span class="price">NT$ 1,490</span>
+                <span class="stock">庫存: 35 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-006.jpg" alt="運動上衣 06款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">運動服</span>
+            <span class="badge brand-badge">Urban Leaf</span>
+            <h3>運動上衣 06款</h3>
+            <p class="details">顏色: 黑色 | 尺寸: L</p>
+            <div class="price-row">
+                <span class="price">NT$ 1,710</span>
+                <span class="stock">庫存: 4 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-007.jpg" alt="襯衫 07款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">上衣</span>
+            <span class="badge brand-badge">North Thread</span>
+            <h3>襯衫 07款</h3>
+            <p class="details">顏色: 白色 | 尺寸: XL</p>
+            <div class="price-row">
+                <span class="price">NT$ 1,930</span>
+                <span class="stock">庫存: 11 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-008.jpg" alt="休閒長褲 08款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">褲子</span>
+            <span class="badge brand-badge">Mode Studio</span>
+            <h3>休閒長褲 08款</h3>
+            <p class="details">顏色: 米色 | 尺寸: S</p>
+            <div class="price-row">
+                <span class="price">NT$ 2,150</span>
+                <span class="stock">庫存: 18 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-009.jpg" alt="牛仔短裙 09款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">裙子</span>
+            <span class="badge brand-badge">Daily Wear</span>
+            <h3>牛仔短裙 09款</h3>
+            <p class="details">顏色: 藍色 | 尺寸: M</p>
+            <div class="price-row">
+                <span class="price">NT$ 2,370</span>
+                <span class="stock">庫存: 25 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-010.jpg" alt="丹寧外套 10款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">外套</span>
+            <span class="badge brand-badge">Peak Active</span>
+            <h3>丹寧外套 10款</h3>
+            <p class="details">顏色: 灰色 | 尺寸: L</p>
+            <div class="price-row">
+                <span class="price">NT$ 500</span>
+                <span class="stock">庫存: 32 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-011.jpg" alt="無袖洋裝 11款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">洋裝</span>
+            <span class="badge brand-badge">Urban Leaf</span>
+            <h3>無袖洋裝 11款</h3>
+            <p class="details">顏色: 綠色 | 尺寸: XL</p>
+            <div class="price-row">
+                <span class="price">NT$ 720</span>
+                <span class="stock">庫存: 1 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-012.jpg" alt="瑜伽褲 12款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">運動服</span>
+            <span class="badge brand-badge">North Thread</span>
+            <h3>瑜伽褲 12款</h3>
+            <p class="details">顏色: 黑色 | 尺寸: S</p>
+            <div class="price-row">
+                <span class="price">NT$ 940</span>
+                <span class="stock">庫存: 8 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-013.jpg" alt="針織上衣 13款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">上衣</span>
+            <span class="badge brand-badge">Mode Studio</span>
+            <h3>針織上衣 13款</h3>
+            <p class="details">顏色: 白色 | 尺寸: M</p>
+            <div class="price-row">
+                <span class="price">NT$ 1,160</span>
+                <span class="stock">庫存: 15 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-014.jpg" alt="西裝褲 14款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">褲子</span>
+            <span class="badge brand-badge">Daily Wear</span>
+            <h3>西裝褲 14款</h3>
+            <p class="details">顏色: 米色 | 尺寸: L</p>
+            <div class="price-row">
+                <span class="price">NT$ 1,380</span>
+                <span class="stock">庫存: 22 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-015.jpg" alt="長裙 15款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">裙子</span>
+            <span class="badge brand-badge">Peak Active</span>
+            <h3>長裙 15款</h3>
+            <p class="details">顏色: 藍色 | 尺寸: XL</p>
+            <div class="price-row">
+                <span class="price">NT$ 1,600</span>
+                <span class="stock">庫存: 29 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-016.jpg" alt="連帽外套 16款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">外套</span>
+            <span class="badge brand-badge">Urban Leaf</span>
+            <h3>連帽外套 16款</h3>
+            <p class="details">顏色: 灰色 | 尺寸: S</p>
+            <div class="price-row">
+                <span class="price">NT$ 1,820</span>
+                <span class="stock">庫存: 36 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-017.jpg" alt="長袖洋裝 17款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">洋裝</span>
+            <span class="badge brand-badge">North Thread</span>
+            <h3>長袖洋裝 17款</h3>
+            <p class="details">顏色: 綠色 | 尺寸: M</p>
+            <div class="price-row">
+                <span class="price">NT$ 2,040</span>
+                <span class="stock">庫存: 5 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-018.jpg" alt="訓練短褲 18款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">運動服</span>
+            <span class="badge brand-badge">Mode Studio</span>
+            <h3>訓練短褲 18款</h3>
+            <p class="details">顏色: 黑色 | 尺寸: L</p>
+            <div class="price-row">
+                <span class="price">NT$ 2,260</span>
+                <span class="stock">庫存: 12 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-019.jpg" alt="短袖上衣 19款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">上衣</span>
+            <span class="badge brand-badge">Daily Wear</span>
+            <h3>短袖上衣 19款</h3>
+            <p class="details">顏色: 白色 | 尺寸: XL</p>
+            <div class="price-row">
+                <span class="price">NT$ 390</span>
+                <span class="stock">庫存: 19 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-020.jpg" alt="寬褲 20款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">褲子</span>
+            <span class="badge brand-badge">Peak Active</span>
+            <h3>寬褲 20款</h3>
+            <p class="details">顏色: 米色 | 尺寸: S</p>
+            <div class="price-row">
+                <span class="price">NT$ 610</span>
+                <span class="stock">庫存: 26 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-021.jpg" alt="A字裙 21款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">裙子</span>
+            <span class="badge brand-badge">Urban Leaf</span>
+            <h3>A字裙 21款</h3>
+            <p class="details">顏色: 藍色 | 尺寸: M</p>
+            <div class="price-row">
+                <span class="price">NT$ 830</span>
+                <span class="stock">庫存: 33 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-022.jpg" alt="西裝外套 22款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">外套</span>
+            <span class="badge brand-badge">North Thread</span>
+            <h3>西裝外套 22款</h3>
+            <p class="details">顏色: 灰色 | 尺寸: L</p>
+            <div class="price-row">
+                <span class="price">NT$ 1,050</span>
+                <span class="stock">庫存: 2 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-023.jpg" alt="襯衫洋裝 23款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">洋裝</span>
+            <span class="badge brand-badge">Mode Studio</span>
+            <h3>襯衫洋裝 23款</h3>
+            <p class="details">顏色: 綠色 | 尺寸: XL</p>
+            <div class="price-row">
+                <span class="price">NT$ 1,270</span>
+                <span class="stock">庫存: 9 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-024.jpg" alt="運動外套 24款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">運動服</span>
+            <span class="badge brand-badge">Daily Wear</span>
+            <h3>運動外套 24款</h3>
+            <p class="details">顏色: 黑色 | 尺寸: S</p>
+            <div class="price-row">
+                <span class="price">NT$ 1,490</span>
+                <span class="stock">庫存: 16 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-025.jpg" alt="條紋上衣 25款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">上衣</span>
+            <span class="badge brand-badge">Peak Active</span>
+            <h3>條紋上衣 25款</h3>
+            <p class="details">顏色: 白色 | 尺寸: M</p>
+            <div class="price-row">
+                <span class="price">NT$ 1,710</span>
+                <span class="stock">庫存: 23 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-026.jpg" alt="棉質短褲 26款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">褲子</span>
+            <span class="badge brand-badge">Urban Leaf</span>
+            <h3>棉質短褲 26款</h3>
+            <p class="details">顏色: 米色 | 尺寸: L</p>
+            <div class="price-row">
+                <span class="price">NT$ 1,930</span>
+                <span class="stock">庫存: 30 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-027.jpg" alt="針織裙 27款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">裙子</span>
+            <span class="badge brand-badge">North Thread</span>
+            <h3>針織裙 27款</h3>
+            <p class="details">顏色: 藍色 | 尺寸: XL</p>
+            <div class="price-row">
+                <span class="price">NT$ 2,150</span>
+                <span class="stock">庫存: 37 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-028.jpg" alt="羊毛外套 28款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">外套</span>
+            <span class="badge brand-badge">Mode Studio</span>
+            <h3>羊毛外套 28款</h3>
+            <p class="details">顏色: 灰色 | 尺寸: S</p>
+            <div class="price-row">
+                <span class="price">NT$ 2,370</span>
+                <span class="stock">庫存: 6 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-029.jpg" alt="針織洋裝 29款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">洋裝</span>
+            <span class="badge brand-badge">Daily Wear</span>
+            <h3>針織洋裝 29款</h3>
+            <p class="details">顏色: 綠色 | 尺寸: M</p>
+            <div class="price-row">
+                <span class="price">NT$ 500</span>
+                <span class="stock">庫存: 13 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-030.jpg" alt="慢跑長褲 30款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">運動服</span>
+            <span class="badge brand-badge">Peak Active</span>
+            <h3>慢跑長褲 30款</h3>
+            <p class="details">顏色: 黑色 | 尺寸: L</p>
+            <div class="price-row">
+                <span class="price">NT$ 720</span>
+                <span class="stock">庫存: 20 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-031.jpg" alt="純棉T恤 31款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">上衣</span>
+            <span class="badge brand-badge">Urban Leaf</span>
+            <h3>純棉T恤 31款</h3>
+            <p class="details">顏色: 白色 | 尺寸: XL</p>
+            <div class="price-row">
+                <span class="price">NT$ 940</span>
+                <span class="stock">庫存: 27 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-032.jpg" alt="直筒牛仔褲 32款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">褲子</span>
+            <span class="badge brand-badge">North Thread</span>
+            <h3>直筒牛仔褲 32款</h3>
+            <p class="details">顏色: 米色 | 尺寸: S</p>
+            <div class="price-row">
+                <span class="price">NT$ 1,160</span>
+                <span class="stock">庫存: 34 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-033.jpg" alt="百褶裙 33款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">裙子</span>
+            <span class="badge brand-badge">Mode Studio</span>
+            <h3>百褶裙 33款</h3>
+            <p class="details">顏色: 藍色 | 尺寸: M</p>
+            <div class="price-row">
+                <span class="price">NT$ 1,380</span>
+                <span class="stock">庫存: 3 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-034.jpg" alt="防風外套 34款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">外套</span>
+            <span class="badge brand-badge">Daily Wear</span>
+            <h3>防風外套 34款</h3>
+            <p class="details">顏色: 灰色 | 尺寸: L</p>
+            <div class="price-row">
+                <span class="price">NT$ 1,600</span>
+                <span class="stock">庫存: 10 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-035.jpg" alt="碎花洋裝 35款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">洋裝</span>
+            <span class="badge brand-badge">Peak Active</span>
+            <h3>碎花洋裝 35款</h3>
+            <p class="details">顏色: 綠色 | 尺寸: XL</p>
+            <div class="price-row">
+                <span class="price">NT$ 1,820</span>
+                <span class="stock">庫存: 17 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-036.jpg" alt="運動上衣 36款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">運動服</span>
+            <span class="badge brand-badge">Urban Leaf</span>
+            <h3>運動上衣 36款</h3>
+            <p class="details">顏色: 黑色 | 尺寸: S</p>
+            <div class="price-row">
+                <span class="price">NT$ 2,040</span>
+                <span class="stock">庫存: 24 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-037.jpg" alt="襯衫 37款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">上衣</span>
+            <span class="badge brand-badge">North Thread</span>
+            <h3>襯衫 37款</h3>
+            <p class="details">顏色: 白色 | 尺寸: M</p>
+            <div class="price-row">
+                <span class="price">NT$ 2,260</span>
+                <span class="stock">庫存: 31 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-038.jpg" alt="休閒長褲 38款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">褲子</span>
+            <span class="badge brand-badge">Mode Studio</span>
+            <h3>休閒長褲 38款</h3>
+            <p class="details">顏色: 米色 | 尺寸: L</p>
+            <div class="price-row">
+                <span class="price">NT$ 390</span>
+                <span class="stock">庫存: 0 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-039.jpg" alt="牛仔短裙 39款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">裙子</span>
+            <span class="badge brand-badge">Daily Wear</span>
+            <h3>牛仔短裙 39款</h3>
+            <p class="details">顏色: 藍色 | 尺寸: XL</p>
+            <div class="price-row">
+                <span class="price">NT$ 610</span>
+                <span class="stock">庫存: 7 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-040.jpg" alt="丹寧外套 40款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">外套</span>
+            <span class="badge brand-badge">Peak Active</span>
+            <h3>丹寧外套 40款</h3>
+            <p class="details">顏色: 灰色 | 尺寸: S</p>
+            <div class="price-row">
+                <span class="price">NT$ 830</span>
+                <span class="stock">庫存: 14 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-041.jpg" alt="無袖洋裝 41款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">洋裝</span>
+            <span class="badge brand-badge">Urban Leaf</span>
+            <h3>無袖洋裝 41款</h3>
+            <p class="details">顏色: 綠色 | 尺寸: M</p>
+            <div class="price-row">
+                <span class="price">NT$ 1,050</span>
+                <span class="stock">庫存: 21 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-042.jpg" alt="瑜伽褲 42款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">運動服</span>
+            <span class="badge brand-badge">North Thread</span>
+            <h3>瑜伽褲 42款</h3>
+            <p class="details">顏色: 黑色 | 尺寸: L</p>
+            <div class="price-row">
+                <span class="price">NT$ 1,270</span>
+                <span class="stock">庫存: 28 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-043.jpg" alt="針織上衣 43款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">上衣</span>
+            <span class="badge brand-badge">Mode Studio</span>
+            <h3>針織上衣 43款</h3>
+            <p class="details">顏色: 白色 | 尺寸: XL</p>
+            <div class="price-row">
+                <span class="price">NT$ 1,490</span>
+                <span class="stock">庫存: 35 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-044.jpg" alt="西裝褲 44款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">褲子</span>
+            <span class="badge brand-badge">Daily Wear</span>
+            <h3>西裝褲 44款</h3>
+            <p class="details">顏色: 米色 | 尺寸: S</p>
+            <div class="price-row">
+                <span class="price">NT$ 1,710</span>
+                <span class="stock">庫存: 4 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-045.jpg" alt="長裙 45款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">裙子</span>
+            <span class="badge brand-badge">Peak Active</span>
+            <h3>長裙 45款</h3>
+            <p class="details">顏色: 藍色 | 尺寸: M</p>
+            <div class="price-row">
+                <span class="price">NT$ 1,930</span>
+                <span class="stock">庫存: 11 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-046.jpg" alt="連帽外套 46款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">外套</span>
+            <span class="badge brand-badge">Urban Leaf</span>
+            <h3>連帽外套 46款</h3>
+            <p class="details">顏色: 灰色 | 尺寸: L</p>
+            <div class="price-row">
+                <span class="price">NT$ 2,150</span>
+                <span class="stock">庫存: 18 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-047.jpg" alt="長袖洋裝 47款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">洋裝</span>
+            <span class="badge brand-badge">North Thread</span>
+            <h3>長袖洋裝 47款</h3>
+            <p class="details">顏色: 綠色 | 尺寸: XL</p>
+            <div class="price-row">
+                <span class="price">NT$ 2,370</span>
+                <span class="stock">庫存: 25 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-048.jpg" alt="訓練短褲 48款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">運動服</span>
+            <span class="badge brand-badge">Mode Studio</span>
+            <h3>訓練短褲 48款</h3>
+            <p class="details">顏色: 黑色 | 尺寸: S</p>
+            <div class="price-row">
+                <span class="price">NT$ 500</span>
+                <span class="stock">庫存: 32 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-049.jpg" alt="短袖上衣 49款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">上衣</span>
+            <span class="badge brand-badge">Daily Wear</span>
+            <h3>短袖上衣 49款</h3>
+            <p class="details">顏色: 白色 | 尺寸: M</p>
+            <div class="price-row">
+                <span class="price">NT$ 720</span>
+                <span class="stock">庫存: 1 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-050.jpg" alt="寬褲 50款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">褲子</span>
+            <span class="badge brand-badge">Peak Active</span>
+            <h3>寬褲 50款</h3>
+            <p class="details">顏色: 米色 | 尺寸: L</p>
+            <div class="price-row">
+                <span class="price">NT$ 940</span>
+                <span class="stock">庫存: 8 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-051.jpg" alt="A字裙 51款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">裙子</span>
+            <span class="badge brand-badge">Urban Leaf</span>
+            <h3>A字裙 51款</h3>
+            <p class="details">顏色: 藍色 | 尺寸: XL</p>
+            <div class="price-row">
+                <span class="price">NT$ 1,160</span>
+                <span class="stock">庫存: 15 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-052.jpg" alt="西裝外套 52款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">外套</span>
+            <span class="badge brand-badge">North Thread</span>
+            <h3>西裝外套 52款</h3>
+            <p class="details">顏色: 灰色 | 尺寸: S</p>
+            <div class="price-row">
+                <span class="price">NT$ 1,380</span>
+                <span class="stock">庫存: 22 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-053.jpg" alt="襯衫洋裝 53款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">洋裝</span>
+            <span class="badge brand-badge">Mode Studio</span>
+            <h3>襯衫洋裝 53款</h3>
+            <p class="details">顏色: 綠色 | 尺寸: M</p>
+            <div class="price-row">
+                <span class="price">NT$ 1,600</span>
+                <span class="stock">庫存: 29 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-054.jpg" alt="運動外套 54款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">運動服</span>
+            <span class="badge brand-badge">Daily Wear</span>
+            <h3>運動外套 54款</h3>
+            <p class="details">顏色: 黑色 | 尺寸: L</p>
+            <div class="price-row">
+                <span class="price">NT$ 1,820</span>
+                <span class="stock">庫存: 36 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-055.jpg" alt="條紋上衣 55款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">上衣</span>
+            <span class="badge brand-badge">Peak Active</span>
+            <h3>條紋上衣 55款</h3>
+            <p class="details">顏色: 白色 | 尺寸: XL</p>
+            <div class="price-row">
+                <span class="price">NT$ 2,040</span>
+                <span class="stock">庫存: 5 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-056.jpg" alt="棉質短褲 56款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">褲子</span>
+            <span class="badge brand-badge">Urban Leaf</span>
+            <h3>棉質短褲 56款</h3>
+            <p class="details">顏色: 米色 | 尺寸: S</p>
+            <div class="price-row">
+                <span class="price">NT$ 2,260</span>
+                <span class="stock">庫存: 12 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-057.jpg" alt="針織裙 57款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">裙子</span>
+            <span class="badge brand-badge">North Thread</span>
+            <h3>針織裙 57款</h3>
+            <p class="details">顏色: 藍色 | 尺寸: M</p>
+            <div class="price-row">
+                <span class="price">NT$ 390</span>
+                <span class="stock">庫存: 19 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-058.jpg" alt="羊毛外套 58款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">外套</span>
+            <span class="badge brand-badge">Mode Studio</span>
+            <h3>羊毛外套 58款</h3>
+            <p class="details">顏色: 灰色 | 尺寸: L</p>
+            <div class="price-row">
+                <span class="price">NT$ 610</span>
+                <span class="stock">庫存: 26 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-059.jpg" alt="針織洋裝 59款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">洋裝</span>
+            <span class="badge brand-badge">Daily Wear</span>
+            <h3>針織洋裝 59款</h3>
+            <p class="details">顏色: 綠色 | 尺寸: XL</p>
+            <div class="price-row">
+                <span class="price">NT$ 830</span>
+                <span class="stock">庫存: 33 件</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/Joshua1246/clothing-dashboard/main/product-060.jpg" alt="慢跑長褲 60款" loading="lazy">
+        </div>
+        <div class="card-body">
+            <span class="badge">運動服</span>
+            <span class="badge brand-badge">Peak Active</span>
+            <h3>慢跑長褲 60款</h3>
+            <p class="details">顏色: 黑色 | 尺寸: S</p>
+            <div class="price-row">
+                <span class="price">NT$ 1,050</span>
+                <span class="stock">庫存: 2 件</span>
+            </div>
+        </div>
+    </div>
+    
+        </div>
+    </div>
+</body>
+</html>
